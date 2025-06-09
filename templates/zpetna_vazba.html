@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h2>Zpětná vazba</h2>
 <form method="post">
     {% csrf_token %}
@@ -11,3 +14,4 @@
 {% if uspesne %}
     <p>Zpětná vazba byla úspěšně odeslána!</p>
 {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Django stránka</title>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Domů</a> |
+        <a href="{% url 'zobraz_parametr' %}?moj_param=Ahoj">GET parametr</a> |
+        <a href="{% url 'vyber_kategorie' %}">Kategorie</a> |
+        <a href="{% url 'zpetna_vazba' %}">Zpětná vazba</a> |
+        <a href="{% url 'staticka' %}">Statická</a> |
+        <a href="{% url 'kontakt' %}">Kontakt</a>
+    </nav>
+
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

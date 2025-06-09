@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h2>Kontaktujte nás</h2>
 <form method="post">
     {% csrf_token %}
@@ -11,3 +14,4 @@
 {% if potvrzeni %}
     <p>Formulář byl úspěšně odeslán!</p>
 {% endif %}
+{% endblock %}
