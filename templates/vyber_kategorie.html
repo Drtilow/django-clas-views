@@ -1,0 +1,14 @@
+<h2>Vyber kategorii:</h2>
+<form method="post">
+    {% csrf_token %}
+    <select name="kategorie">
+        <option value="filmy">Filmy</option>
+        <option value="knihy">Knihy</option>
+        <option value="hry">Hry</option>
+    </select>
+    <button type="submit">Odeslat</button>
+</form>
+
+{% if kategorie %}
+    <p>Vybral jsi: {{ kategorie }}</p>
+{% endif %}

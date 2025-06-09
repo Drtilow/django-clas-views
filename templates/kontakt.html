@@ -1,0 +1,13 @@
+<h2>Kontaktujte nás</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Jméno:</label>
+    <input type="text" name="jmeno" required><br>
+    <label>Zpráva:</label>
+    <textarea name="zprava" required></textarea><br>
+    <button type="submit">Odeslat</button>
+</form>
+
+{% if potvrzeni %}
+    <p>Formulář byl úspěšně odeslán!</p>
+{% endif %}
